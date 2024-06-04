@@ -6,9 +6,9 @@ function makeMove(index) {
     moves[index] = currentPlayer;
     document.getElementsByClassName("cell")[index].innerText = currentPlayer;
     if (checkForWin()) {
-      document.getElementById("message").innerText = currentPlayer + " wins!";
+      document.getElementById("message").innerText = currentPlayer + " победили!";
     } else if (moves.every((val) => val !== "")) {
-      document.getElementById("message").innerText = "It's a draw!";
+      document.getElementById("message").innerText = "Это ничья!";
     } else {
       currentPlayer = currentPlayer === "X" ? "O" : "X";
     }
